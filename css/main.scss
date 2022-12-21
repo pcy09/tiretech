@@ -1,0 +1,305 @@
+/********** 메인 **********/
+.main_container {
+	main {
+		.search_wrap {
+			.search {
+				position: relative;
+				top: -23.5px;
+				background-color: #fff;
+				width: 650px;
+				margin: auto;
+				padding: 12px 30px;
+				border: 1px solid #ccc;
+				border-radius: 100px;
+				ul {
+					display: flex;
+					justify-content: space-between;
+					li {
+						position: relative;
+						a {
+							img.mobile {
+								display: none;
+								height: 50px;
+							}
+						}
+					}
+					li:first-child:before {
+						display: none;
+					}
+					li:before {
+						content: "";
+						position: absolute;
+						top: -3px;
+						left: -30px;
+						width: 1px;
+						height: 30px;
+						background-color: #ccc;
+					}
+				}
+			}
+		}
+		.service_wrap {
+			.service {
+				width: 1092px;
+				margin: auto;
+				max-width: 100%;
+				.item {
+					float: left;
+					padding: 0 8px;
+					a {
+						img {
+							width: 100%;
+						}
+						img.mobile {
+							display: none;
+						}
+					}
+				}
+				.service_item1 {
+					float: left;
+					width: 50%;
+					a {
+						img {
+						}
+					}
+				}
+				.service_right_wrap {
+					float: left;
+					width: 50%;
+					.service_item2 {
+						width: 50%;
+						text-align: right;
+						a {
+							img {
+							}
+						}
+					}
+					.service_item3 {
+						width: 50%;
+						text-align: right;
+						a {
+							img {
+							}
+						}
+					}
+				}
+				.service_item4 {
+					margin-top: 30px;
+					a {
+						img {
+						}
+					}
+				}
+			}
+			.service:after {
+				content: "";
+				display: block;
+				clear: both;
+			}
+		}
+		.sns_wrap {
+			background-color: #eeeeee;
+			padding: 50px 0;
+			margin-top: 80px;
+			.sns {
+				width: 1092px;
+				margin: auto;
+				max-width: 100%;
+				h3 {
+					padding-left: 10px;
+					font-size: 25px;
+				}
+				.item_wrap {
+					.item {
+						float: left;
+						width: 25%;
+						padding: 0 10px;
+						a {
+							display: block;
+							margin: 20px 0;
+							span.thumb {
+								display: block;
+								overflow: hidden;
+								// padding-bottom: 100%;
+								// height: 0;
+								img {
+									width: 100%;
+									transition: all 0.5s;
+									&:hover {
+										transform: scale(1.2);
+									}
+								}
+							}
+						}
+					}
+				}
+				.item_wrap:after {
+					content: "";
+					display: block;
+					clear: both;
+				}
+			}
+		}
+	}
+}
+
+/********** 반응형 **********/
+@media (max-width: 1169px) {
+	.main_container {
+		main {
+			.service_wrap {
+				.service {
+					width: 952px;
+				}
+			}
+			.sns_wrap {
+				.sns {
+					width: 952px;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 991px) {
+	.main_container {
+		main {
+			.service_wrap {
+				.service {
+					width: 712px;
+				}
+			}
+			.sns_wrap {
+				.sns {
+					width: 712px;
+					.item_wrap {
+						.item {
+							width: 33.33%;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media (max-width: 768px) {
+	.main_container {
+		main {
+			.search_wrap {
+				padding: 0 20px;
+				.search {
+					width: 100%;
+					top: -40px;
+					ul {
+						justify-content: space-around;
+						li {
+							a {
+								img.pc {
+									display: none;
+								}
+								img.mobile {
+									display: block;
+								}
+							}
+						}
+						li:before {
+							height: 50px;
+						}
+					}
+				}
+			}
+			.service_wrap {
+				.service {
+					width: 100%;
+					.item {
+						a {
+							img.pc {
+								display: none;
+							}
+							img.mobile {
+								display: block;
+							}
+						}
+					}
+					.service_item1 {
+						a {
+							img {
+							}
+						}
+					}
+					.service_right_wrap {
+						.service_item2 {
+							width: 100%;
+							margin-bottom: 17px;
+							a {
+								img {
+								}
+							}
+						}
+						.service_item3 {
+							width: 100%;
+							a {
+								img {
+								}
+							}
+						}
+					}
+					.service_item4 {
+						a {
+							img {
+							}
+						}
+					}
+				}
+				.service:after {
+					content: "";
+					display: block;
+					clear: both;
+				}
+			}
+			.sns_wrap {
+				.sns {
+					width: 100%;
+					h3 {
+						padding-left: 20px;
+					}
+					.item_wrap {
+						padding: 0 10px;
+						.item {
+							width: 50%;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media (max-width: 430px) {
+	.main_container {
+		main {
+			.search_wrap {
+				.search {
+					ul {
+						li {
+							a {
+								img.pc {
+								}
+								img.mobile {
+									height: 40px;
+								}
+							}
+						}
+						li:before {
+							left: -15px;
+						}
+					}
+				}
+			}
+			.service_wrap {
+				.service {
+					.service_item {
+					}
+				}
+			}
+		}
+	}
+}

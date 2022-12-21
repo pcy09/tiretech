@@ -1,0 +1,24 @@
+/********** visual **********/
+.visual{
+    text-align: center;
+    img.visual_pc{
+        max-width: 100%;
+    }
+    img.visual_m{
+        display: none;
+    }
+}
+
+// 모바일 990px까지
+@media (max-width:990px){
+    .visual{
+        img.visual_pc{
+            display: none;
+        }
+        img.visual_m{
+            display: block;
+            max-width: 100%;
+            margin-top: 60px;
+        }
+    }
+}

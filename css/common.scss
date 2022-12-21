@@ -1,0 +1,384 @@
+/********** 전체 **********/
+body{
+    font-family: 'Noto Sans KR', '맑은고딕', Helvetica, Arial, sans-serif;
+    color:#333;
+    line-height: 1.45;
+    font-size: 14px;
+}
+
+
+/********** 헤더 **********/
+.header_container{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:60px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 30%);
+    z-index:300;
+    header{
+        width:1092px;
+        margin:0 auto;
+        .header_main{
+            h1{
+                float: left;
+                margin-top:20px;
+                margin-left:-20px;
+                a{
+                    display: block;
+                    width:163px;
+                    height:21px;
+                    text-indent: -9999px;
+                    background: url(../img/logo.png) no-repeat;
+                }
+            }
+            button.trigger{
+                display: none;
+                span.icon_bar{
+
+                }
+            }
+            .gnb{
+                .navbar{
+                    ul.navbar_gnb{
+                        margin-left: 163px;
+                        text-align: center;
+                        >li{
+                            display: inline-block;
+                            position: relative;
+                            >a{
+                                display: block;
+                                line-height: 60px;
+                                padding: 0 30px 0 15px;
+                                color:#000;
+                                font-size: 16px;
+                            }
+                            .icon{
+
+                            }
+                            ul.sub{
+                                display: none;
+                                width:100%;
+                                position: absolute;
+                                left:0;
+                                top:70px;
+                                z-index:200;
+                                li{
+                                    a{
+                                        display: block;
+                                        text-align-last: left;
+                                        padding:10px 0 0 15px;
+                                        color:#fff;
+                                        font-weight: 300;
+                                    }
+                                    a:hover{
+                                        color:#942EA5;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .sub_shadow{
+        display: none;
+        position: absolute;
+        top:60px;
+        left:0;
+        width:100%;
+        height:200px;
+        background-color: rgba(0, 0, 0, 0.616);
+        z-index:100;
+
+    }
+}
+
+
+
+/********** 푸터 **********/
+.footer_wrap{
+    background-color: #464646;
+    padding:10px 0;
+    footer{
+        width:1092px;
+        margin:0 auto;
+        .logo{
+            float: left;
+            font-size: 0;
+            img{
+
+            }
+        }
+        .info{
+            float: left;
+            margin-left:20px;
+            address{
+                color:#b3b3b3;
+                font-style: normal;
+                font-size: 12px;
+                p{
+                    a{
+                        color:#8b8b8b;
+                    }
+                }
+            }
+        }
+        .family_site_wrap{
+            float: right;
+            margin-top:15px;
+            margin-left:8px;
+            select{
+                max-width:110px;
+                font-size: 12px;
+                background:#fff url('../img/icon_snb_arr.png') no-repeat right center;
+                appearance: none;
+                line-height: 1.8;
+                padding-left:10px;
+                option{
+
+                }
+            }
+        }
+        .link_wrap{
+            float: right;
+            margin-top:15px;
+            .link{
+                color:#b3b3b3;
+                font-size: 12px;
+                a{
+
+                }
+            }
+        }
+    }
+    footer:after{
+        content:'';
+        display: block;
+        clear: both;
+    }
+}
+
+@media (max-width:1169px){
+    .header_container{
+        header{
+            width:100%;
+            margin:0 10px;
+            .header_main{
+                h1{
+                    margin-left:20px;
+                    a{
+                    }
+                }
+                button.trigger{
+                    display: block;
+                    width:22px;
+                    height: 22px;
+                    margin:15px 30px 0 0;
+                    float: right;
+                    background-color: transparent;
+                    border:none;
+                    position: relative;
+                    cursor: pointer;
+                    span.icon_bar{
+                        position: absolute;
+                        left:0;
+                        width:100%;
+                        height: 2px;
+                        background-color: purple;
+                        border-radius: 1px;
+                        transition:all .3s;
+                    }
+                    span.icon_bar:nth-child(1){
+                        top:4px;
+                    }
+                    span.icon_bar:nth-child(2){
+                        top:calc(50% - 1px);
+                    }
+                    span.icon_bar:nth-child(3){
+                        bottom:4px;
+                    }
+                }
+                button.trigger.open{
+                    span.icon_bar:nth-child(1){
+                        transform:rotate(45deg);
+                        margin-top: 6px;
+                    }
+                    span.icon_bar:nth-child(2){
+                        width:0;
+                    }
+                    span.icon_bar:nth-child(3){
+                        transform:rotate(-45deg);
+                        margin-bottom: 6px;
+                    }
+                }
+                .gnb{
+                    position: fixed;
+                    top:0;
+                    right:-250px;
+                    bottom:0;
+                    width:250px;
+                    background-color: #333;
+                    .navbar{
+                        padding-bottom:100px;
+                        ul.navbar_gnb{
+                            margin-left:0;
+                            text-align-last: left;
+
+                            >li{
+                                display: block;
+                                position: relative;
+                                >a{
+                                color:#fff;
+
+                                }
+                                .icon{
+                                    position: absolute;
+                                    width:14px;
+                                    height:14px;
+                                    top:22px;
+                                    right:20px;
+                                    transition:.5s;
+                                }
+                                .icon:before,.icon:after{
+                                    content:'';
+                                    position: absolute;
+                                    top:calc(50% - 2px);
+                                    left:0;
+                                    width:14px;
+                                    height:4px;
+                                    background-color: #fff;
+                                }
+                                .icon:before{}
+                                .icon:after{
+                                    transform: rotate(90deg);
+                                }
+                                ul.sub{
+                                    display: none;
+                                    position: relative;
+                                    top:0;
+                                    background-color: #444144;
+                                    padding-bottom:10px;
+                                    li{
+                                        a{
+
+                                        }
+                                    }
+                                }
+                                ul.sub br{
+                                    display: none;
+                                }
+                            }
+                            li.on a{
+                                color:#942EA5;
+                            }
+                            li.on .icon:after,
+                            li.on .icon:before{
+                                background-color: #942EA5;
+                            }
+                            li.on .icon{
+                                transform: rotate(45deg);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .sub_shadow{
+            display: none;
+        }
+    }
+    .footer_wrap{
+        footer{
+            width:952px;
+        }
+    }
+}
+@media (max-width:991px){
+    .header_container{
+        header{
+            .header_main{
+                h1{
+                    a{
+                    }
+                }
+                button.trigger{
+                    span.icon_bar{
+    
+                    }
+                }
+                .gnb{
+                    .navbar{
+                        ul.navbar_gnb{
+                            li{
+                                a{
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer_wrap{
+        footer{
+            width: 712px;
+            .link_wrap{
+                display: none;
+            }
+        }
+    }
+}
+@media (max-width:768px){
+    .header_container{
+        header{
+            .header_main{
+                h1{
+                    a{
+                    }
+                }
+                button.trigger{
+                    span.icon_bar{
+    
+                    }
+                }
+                .gnb{
+                    .navbar{
+                        ul.navbar_gnb{
+                            li{
+                                a{
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer_wrap{
+        padding:10px 20px;
+        footer{
+            width:100%;
+            position: relative;
+            .logo{
+                float: none;
+                margin-bottom: 20px;
+            }
+            .info{
+                float: none;
+                margin-left: 0;
+            }
+            .family_site_wrap{
+                float: none;
+                position: absolute;
+                top:0;
+                right:0;
+            }
+        }
+    }
+}
+@media (max-width:430px){
+
+}

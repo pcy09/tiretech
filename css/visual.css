@@ -1,0 +1,21 @@
+/********** visual **********/
+.visual {
+  text-align: center;
+}
+.visual img.visual_pc {
+  max-width: 100%;
+}
+.visual img.visual_m {
+  display: none;
+}
+
+@media (max-width: 990px) {
+  .visual img.visual_pc {
+    display: none;
+  }
+  .visual img.visual_m {
+    display: block;
+    max-width: 100%;
+    margin-top: 60px;
+  }
+}

@@ -1,0 +1,196 @@
+@charset "UTF-8";
+/********** 메인 **********/
+.main_container main .search_wrap .search {
+  position: relative;
+  top: -23.5px;
+  background-color: #fff;
+  width: 650px;
+  margin: auto;
+  padding: 12px 30px;
+  border: 1px solid #ccc;
+  border-radius: 100px;
+}
+.main_container main .search_wrap .search ul {
+  display: flex;
+  justify-content: space-between;
+}
+.main_container main .search_wrap .search ul li {
+  position: relative;
+}
+.main_container main .search_wrap .search ul li a img.mobile {
+  display: none;
+  height: 50px;
+}
+.main_container main .search_wrap .search ul li:first-child:before {
+  display: none;
+}
+.main_container main .search_wrap .search ul li:before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -30px;
+  width: 1px;
+  height: 30px;
+  background-color: #ccc;
+}
+.main_container main .service_wrap .service {
+  width: 1092px;
+  margin: auto;
+  max-width: 100%;
+}
+.main_container main .service_wrap .service .item {
+  float: left;
+  padding: 0 8px;
+}
+.main_container main .service_wrap .service .item a img {
+  width: 100%;
+}
+.main_container main .service_wrap .service .item a img.mobile {
+  display: none;
+}
+.main_container main .service_wrap .service .service_item1 {
+  float: left;
+  width: 50%;
+}
+.main_container main .service_wrap .service .service_right_wrap {
+  float: left;
+  width: 50%;
+}
+.main_container main .service_wrap .service .service_right_wrap .service_item2 {
+  width: 50%;
+  text-align: right;
+}
+.main_container main .service_wrap .service .service_right_wrap .service_item3 {
+  width: 50%;
+  text-align: right;
+}
+.main_container main .service_wrap .service .service_item4 {
+  margin-top: 30px;
+}
+.main_container main .service_wrap .service:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.main_container main .sns_wrap {
+  background-color: #eeeeee;
+  padding: 50px 0;
+  margin-top: 80px;
+}
+.main_container main .sns_wrap .sns {
+  width: 1092px;
+  margin: auto;
+  max-width: 100%;
+}
+.main_container main .sns_wrap .sns h3 {
+  padding-left: 10px;
+  font-size: 25px;
+}
+.main_container main .sns_wrap .sns .item_wrap .item {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+.main_container main .sns_wrap .sns .item_wrap .item a {
+  display: block;
+  margin: 20px 0;
+}
+.main_container main .sns_wrap .sns .item_wrap .item a span.thumb {
+  display: block;
+  overflow: hidden;
+}
+.main_container main .sns_wrap .sns .item_wrap .item a span.thumb img {
+  width: 100%;
+  transition: all 0.5s;
+}
+.main_container main .sns_wrap .sns .item_wrap .item a span.thumb img:hover {
+  transform: scale(1.2);
+}
+.main_container main .sns_wrap .sns .item_wrap:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/********** 반응형 **********/
+@media (max-width: 1169px) {
+  .main_container main .service_wrap .service {
+    width: 952px;
+  }
+  .main_container main .sns_wrap .sns {
+    width: 952px;
+  }
+}
+@media (max-width: 991px) {
+  .main_container main .service_wrap .service {
+    width: 712px;
+  }
+  .main_container main .sns_wrap .sns {
+    width: 712px;
+  }
+  .main_container main .sns_wrap .sns .item_wrap .item {
+    width: 33.33%;
+  }
+}
+@media (max-width: 768px) {
+  .main_container main .search_wrap {
+    padding: 0 20px;
+  }
+  .main_container main .search_wrap .search {
+    width: 100%;
+    top: -40px;
+  }
+  .main_container main .search_wrap .search ul {
+    justify-content: space-around;
+  }
+  .main_container main .search_wrap .search ul li a img.pc {
+    display: none;
+  }
+  .main_container main .search_wrap .search ul li a img.mobile {
+    display: block;
+  }
+  .main_container main .search_wrap .search ul li:before {
+    height: 50px;
+  }
+  .main_container main .service_wrap .service {
+    width: 100%;
+  }
+  .main_container main .service_wrap .service .item a img.pc {
+    display: none;
+  }
+  .main_container main .service_wrap .service .item a img.mobile {
+    display: block;
+  }
+  .main_container main .service_wrap .service .service_right_wrap .service_item2 {
+    width: 100%;
+    margin-bottom: 17px;
+  }
+  .main_container main .service_wrap .service .service_right_wrap .service_item3 {
+    width: 100%;
+  }
+  .main_container main .service_wrap .service:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .main_container main .sns_wrap .sns {
+    width: 100%;
+  }
+  .main_container main .sns_wrap .sns h3 {
+    padding-left: 20px;
+  }
+  .main_container main .sns_wrap .sns .item_wrap {
+    padding: 0 10px;
+  }
+  .main_container main .sns_wrap .sns .item_wrap .item {
+    width: 50%;
+  }
+}
+@media (max-width: 430px) {
+  .main_container main .search_wrap .search ul li a img.mobile {
+    height: 40px;
+  }
+  .main_container main .search_wrap .search ul li:before {
+    left: -15px;
+  }
+}
